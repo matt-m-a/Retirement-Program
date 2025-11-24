@@ -8,12 +8,15 @@ and determine how much they need to save to meet their retirement goals.
 
 import argparse
 import sys
-from datetime import datetime
-from typing import Dict, Optional
+from typing import Dict
 
 
 class RetirementCalculator:
     """Main retirement calculator class with various calculation methods."""
+    
+    # Constants
+    MAX_RETIREMENT_YEARS = 100  # Maximum years to calculate retirement duration
+    RETIREMENT_GROWTH_RATE = 0.03  # Inflation-adjusted return during retirement
     
     def __init__(self, current_age: int, retirement_age: int, 
                  current_savings: float, annual_contribution: float,
@@ -147,14 +150,11 @@ class RetirementCalculator:
             return float('inf')
         
         # Calculate years with continued growth during retirement
-        # Assuming 3% inflation-adjusted return during retirement
-        retirement_return = 0.03
-        
         years = 0
         remaining_balance = total_savings
         
-        while remaining_balance > 0 and years < 100:
-            remaining_balance = remaining_balance * (1 + retirement_return) - annual_withdrawal
+        while remaining_balance > 0 and years < self.MAX_RETIREMENT_YEARS:
+            remaining_balance = remaining_balance * (1 + self.RETIREMENT_GROWTH_RATE) - annual_withdrawal
             years += 1
         
         return years

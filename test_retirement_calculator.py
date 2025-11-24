@@ -4,8 +4,6 @@ Unit tests for the Retirement Calculator
 """
 
 import unittest
-import sys
-from io import StringIO
 from retirement_calculator import RetirementCalculator, format_currency
 
 
