@@ -22,6 +22,14 @@ cd Retirement-Program
 
 2. No external dependencies required! The calculator uses only Python's standard library.
 
+## Quick Start
+
+See [QUICKSTART.md](QUICKSTART.md) for a quick introduction, or try the example scenarios:
+
+```bash
+python examples.py
+```
+
 ## Usage
 
 ### Basic Usage
