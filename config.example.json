@@ -1,0 +1,9 @@
+{
+  "current_age": 30,
+  "retirement_age": 65,
+  "current_savings": 50000,
+  "annual_contribution": 10000,
+  "expected_return": 0.07,
+  "annual_expenses": 50000,
+  "notes": "This is an example configuration file. Copy to config.json and modify with your values."
+}
